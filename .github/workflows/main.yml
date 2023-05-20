@@ -67,4 +67,4 @@ jobs:
           script: |
             sudo docker pull kotovskji/infra_actions:latest
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 kotovskji/infra_actions:latest
+            sudo docker run --rm -d -p 8000:8000 kotovskji/infra_actions:latest
