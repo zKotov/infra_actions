@@ -49,7 +49,7 @@ jobs:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_PASSWORD }}
         - name: Push to Docker Hub
-          # Пуш образа в Docker Hub 
+          # Пуш образа в Docker Hub
           uses: docker/build-push-action@v2 
           with:
             push: true
@@ -70,4 +70,3 @@ jobs:
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 kotovskji/infra_actions
-            
